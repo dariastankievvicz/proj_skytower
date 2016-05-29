@@ -1,0 +1,14 @@
+# Created by https://www.gitignore.io/api/co,codeblocks
+
+#!! ERROR: co is undefined. Use list command to see defined gitignore types !!#
+
+### CodeBlocks ###
+# specific to CodeBlocks IDE
+*.cbp
+*.layout
+*.depend
+
+# generated directories
+bin/
+obj/
+/include/*.gch
