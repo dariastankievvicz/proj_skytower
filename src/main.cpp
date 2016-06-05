@@ -6,16 +6,16 @@ using namespace std;
 int main()
 {
     char c;
-    BuildingSite budynek(10);
-    while(!budynek.jestGotowy())
+    BuildingSite bud(10);
+    bud.odpytywacz();
+    while(!bud.jestGotowy())
     {
-        budynek.wyswietlInformacje();
-        // ustawianie rzeczy
-        budynek.skonczDzien();
+        bud.wyswietlInformacje();
+        bud.skonczDzien();
         cout << endl;
         cin >> c;
     }
     cout << "Budynek gotowy!" << endl;
-    budynek.wyswietlInformacje();
+    bud.wyswietlInformacje();
     return 0;
 }

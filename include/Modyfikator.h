@@ -3,24 +3,29 @@
 
 #include <vector>
 #include <string>
+#include <time.h>
+#include <cstdlib>
 
 class Modyfikator
 {
     public:
-        Modyfikator(double punktyKonstrukcji,
-                    double punktyWykonczenia,
-                    double mnoznikKonstrukcji,
-                    double mnoznikWykonczenia,
-                    std::string nazwa);
+        Modyfikator(int wRobotnikow,
+                    int wSprzetu,
+                    bool bNaCzas,
+                    double pPogody,
+                    bool wypadek);
         virtual ~Modyfikator();
-        static std::vector<Modyfikator> generujModyfikatory();
-        static std::vector<Modyfikator> losujModyfikatory();
 
-        std::string nazwa;
-        double punktyKonstrukcji;
-        double punktyWykonczenia;
-        double mnoznikKonstrukcji;
-        double mnoznikWykonczenia;
+        Modyfikator generujIWyswietlModyfikator();
+        static Modyfikator generujModyfikator(int iRobotnikow, int iSprzetu);
+        void wyswietlInformacje();
+
+        int wahaniaRobotnikow;
+        int wahaniaSprzetu;
+        bool betonNaCzas;
+        double punktyPogody;
+        bool wypadek;
+
 
     protected:
 

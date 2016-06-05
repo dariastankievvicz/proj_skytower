@@ -1,16 +1,19 @@
 #include "Modyfikator.h"
 
-Modyfikator::Modyfikator(double pKonstrukcji,
-                         double pWykonczenia,
-                         double mKonstrukcji,
-                         double mWykonczenia,
-                         std::string nazwa)
+#include <iostream>
+using namespace std;
+
+Modyfikator::Modyfikator(int wRobotnikow,
+                         int wSprzetu,
+                         bool bNaCzas,
+                         double pPogody,
+                         bool wypadek)
 {
-    this->punktyKonstrukcji = pKonstrukcji;
-    this->punktyWykonczenia = pWykonczenia;
-    this->mnoznikKonstrukcji = mKonstrukcji;
-    this->mnoznikWykonczenia = mWykonczenia;
-    this->nazwa = nazwa;
+    this->wahaniaRobotnikow = wRobotnikow;
+    this->wahaniaSprzetu = wSprzetu;
+    this->betonNaCzas = bNaCzas;
+    this->punktyPogody = pPogody;
+    this->wypadek = wypadek;
 }
 
 Modyfikator::~Modyfikator()
@@ -18,19 +21,26 @@ Modyfikator::~Modyfikator()
     //dtor
 }
 
-std::vector<Modyfikator> Modyfikator::generujModyfikatory()
+Modyfikator Modyfikator::generujModyfikator(int iRobotnikow, int iSprzetu)
 {
-    std::vector<Modyfikator> mods;
+    srand(time(NULL));
+    int d = rand()%(iRobotnikow);
+    int f = rand()%(iSprzetu);
+    bool g = rand()%2;
+    double h = rand()%101;
+    bool i = rand()%2;
 
-    mods.push_back(Modyfikator(0, 0, 1, 1, "Wszystko w normie"));
-    mods.push_back(Modyfikator(35, -20, 1.4, 0.5, "Bonus do konstrukcji"));
+    cout << "Tego dnia pracuje:" << endl;
 
-    return mods;
-}
+    return Modyfikator(d, f, g, h, i);
+};
 
-std::vector<Modyfikator> Modyfikator::losujModyfikatory()
+void Modyfikator::wyswietlInformacje()
 {
-    std::vector<Modyfikator> all = generujModyfikatory();
+    cout << "Ubylo robotnikow: " << wahaniaRobotnikow << endl
+         << "Ubylo sprzetu: " << wahaniaSprzetu << endl
+         << "Beton na czas: " << betonNaCzas << endl
+         << "Pogoda: " << punktyPogody << endl
+         << "Nieszczesliwy wypadek: " << wypadek << endl;
 
-    return all;
 }

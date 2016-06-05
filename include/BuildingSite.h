@@ -9,7 +9,7 @@ class BuildingSite
         bool jestGotowy();
         void skonczDzien();
         void wyswietlInformacje();
-
+        void odpytywacz();
         const int punktyNaPietro = 100;
 
     protected:
@@ -19,6 +19,8 @@ class BuildingSite
         double wykonczenie;
         int docelowaWysokosc;
         int dzien;
+        int iloscRobotnikow;
+        int iloscSprzetu;
 };
 
 #endif // BUILDINGSITE_H
