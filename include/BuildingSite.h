@@ -5,7 +5,6 @@ class BuildingSite
 {
     public:
         BuildingSite(int docelowaWysokosc);
-        virtual ~BuildingSite();
         bool jestGotowy();
         void skonczDzien();
         void wyswietlInformacje();

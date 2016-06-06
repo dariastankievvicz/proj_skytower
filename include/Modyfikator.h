@@ -14,7 +14,6 @@ class Modyfikator
                     bool bNaCzas,
                     double pPogody,
                     bool wypadek);
-        virtual ~Modyfikator();
 
         Modyfikator generujIWyswietlModyfikator();
         static Modyfikator generujModyfikator(int iRobotnikow, int iSprzetu);

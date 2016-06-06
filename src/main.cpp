@@ -6,8 +6,8 @@ using namespace std;
 
 int main()
 {
-    //char c;
-    BuildingSite bud(10);
+
+    BuildingSite bud(0);
     bud.odpytywacz();
     bud.wyswietlInformacjePoczatkowe();
     while(!bud.jestGotowy())
@@ -16,6 +16,5 @@ int main()
         Sleep(1000);
     }
     cout << "Budynek gotowy!" << endl;
-    bud.wyswietlInformacje();
     return 0;
 }

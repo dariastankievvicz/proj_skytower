@@ -16,11 +16,6 @@ Modyfikator::Modyfikator(int wRobotnikow,
     this->wypadek = wypadek;
 }
 
-Modyfikator::~Modyfikator()
-{
-    //dtor
-}
-
 Modyfikator Modyfikator::generujModyfikator(int iRobotnikow, int iSprzetu)
 {
     srand(time(NULL));
@@ -36,6 +31,7 @@ Modyfikator Modyfikator::generujModyfikator(int iRobotnikow, int iSprzetu)
 void Modyfikator::wyswietlInformacje()
 {
     cout << "......................." << endl
+         << "Raport na koniec dnia:" <<endl
          << "Ubylo robotnikow: " << wahaniaRobotnikow << endl
          << "Ubylo sprzetu: " << wahaniaSprzetu << endl
          << "Beton na czas: " << betonNaCzas << endl

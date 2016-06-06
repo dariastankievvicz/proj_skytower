@@ -13,19 +13,13 @@ BuildingSite::BuildingSite(int docelowaWysokosc)
     this->dzien = 0;
 }
 
-BuildingSite::~BuildingSite()
-{
-    //dtor
-}
-
 void BuildingSite::skonczDzien()
 {
-    cout << "Koniec dnia" << endl;
 
     dzien+=1;
-    //if
-    double dziennaKonstrukcja; // przydzielone
-    double dzienneWykonczenie; // przydzielone
+
+    double dziennaKonstrukcja;
+    double dzienneWykonczenie;
     double mnoznikKonstrukcji=1;
     double mnoznikWykonczenia=1;
     double minWykonczenie=0;
@@ -45,13 +39,13 @@ void BuildingSite::skonczDzien()
     if (iloscSprzetu>=15 && iloscSprzetu <=20)
         mnoznikKonstrukcji=90; //dobrze zmechanizowana budowa
 
-    mnoznikWykonczenia=0.8*mnoznikKonstrukcji;
+    mnoznikWykonczenia=0.9*mnoznikKonstrukcji;
 
     dziennaKonstrukcja=iloscRobotnikow;
     dzienneWykonczenie=iloscRobotnikow;
 
     if (mod.wypadek==1)
-        konstrukcja=konstrukcja - 0.1;
+        konstrukcja=konstrukcja - 0.05;
     if (konstrukcja<0)
         konstrukcja=0;
     if (mod.betonNaCzas=0)
