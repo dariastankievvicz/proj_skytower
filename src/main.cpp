@@ -1,19 +1,19 @@
 #include "BuildingSite.h"
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main()
 {
-    char c;
+    //char c;
     BuildingSite bud(10);
     bud.odpytywacz();
+    bud.wyswietlInformacjePoczatkowe();
     while(!bud.jestGotowy())
     {
-        bud.wyswietlInformacje();
         bud.skonczDzien();
-        cout << endl;
-        cin >> c;
+        Sleep(1000);
     }
     cout << "Budynek gotowy!" << endl;
     bud.wyswietlInformacje();

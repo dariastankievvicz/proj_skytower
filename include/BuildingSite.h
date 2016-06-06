@@ -11,6 +11,7 @@ class BuildingSite
         void wyswietlInformacje();
         void odpytywacz();
         const int punktyNaPietro = 100;
+        void wyswietlInformacjePoczatkowe();
 
     protected:
 
